@@ -1,4 +1,4 @@
-const gallaryListEl = document.querySelector('.gallery');
+const galleryListEl = document.querySelector('.gallery');
 
 const images = [
   {
@@ -15,15 +15,13 @@ const images = [
   },
 ];
 
-const makeGallaryImg = images.map(imageInfo => {
+const makeGalleryImg = images.map(imageInfo => {
   const { url, alt } = imageInfo;
   return `
-  <li class = "gallary-item">
-      <a href="#">
-      <img class = "gallary-image" src = '${url}' alt = '${alt}'>
-      </a>
+  <li class = "gallery-item">
+      <img src = '${url}' alt = '${alt}' class = "gallery-image">
   </li>
   `;
 });
 
-gallaryListEl.insertAdjacentHTML('beforeend', makeGallaryImg.join(''));
+galleryListEl.insertAdjacentHTML('beforeend', makeGalleryImg.join(''));
